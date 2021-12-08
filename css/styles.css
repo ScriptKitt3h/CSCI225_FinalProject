@@ -135,7 +135,7 @@ body {
 
   .column {
     float: left;
-    width: 16.66%;
+    width: 20%;
   }
 
   .thumb {
@@ -145,6 +145,18 @@ body {
   .active,
   .thumb:hover {
       opacity: 1;
+  }
+
+  .about_Us{
+    display: block;
+    font-size: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 3px;
   }
   
   input[type="text"],

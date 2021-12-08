@@ -1,0 +1,140 @@
+body {
+    background: linear-gradient(180deg, rgb(253, 44, 208), rgb(44, 238, 212) 50%);
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'fantasma';
+    margin: 0;
+    padding: 0;
+  }
+
+  @font-face {
+    font-family: 'fantasma';
+    src: url(../fonts/Fantasma-Regular.otf);
+  }
+  
+  .navibar {
+    list-style-type: none;
+    background: linear-gradient(180deg, rgb(253, 44, 208), rgb(44, 238, 212) 50%);
+    max-width: 80%;
+    margin: 100px auto 16px;
+    padding: 32px 24px;
+    border-radius: 3px;
+  }
+  
+  .navibar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navibar li {
+    font-size: 22px;
+    float: left;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 0 16px;
+  }
+  
+  .navibar a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    text-decoration: none;
+    color:black;
+  }
+
+  .navibar li a:hover {
+    background-color: rgb(105, 105, 105);
+  }
+
+  .homepage_video {
+    position:absolute;
+    margin: auto;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .homepage {
+    display: block;
+    font-size: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 3px;
+  }
+  
+  @media (max-width: 600px) {
+    body,
+    .message {
+      margin-top: 0;
+      background: white;
+      box-shadow: none;
+    }
+  
+    body {
+      border-top: 16px solid #ffa100;
+    }
+  }
+  
+  .message form {
+    margin: 10px;
+    padding: 30px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  input[type="password"] {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 16px;
+    min-width: 100%;
+    border-radius: 4px;
+    border-width: 0px 1px 1px 0px;
+    border-style: inset;
+  }
+  
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    margin: 20px auto;
+    display: inline-block;
+    text-align: center;
+    background: #039be5;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    min-width: 100%;
+    border-radius: 4px;
+  }
+  
+  .message form p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    min-width: 80%;
+    padding: 5px 0;
+  }
+  
+  .center {
+    padding-left: 150px;
+  }
+  
+  input:focus {
+    background-color: #dfdfe6;
+    outline-width: 0px;
+  }

@@ -1,0 +1,114 @@
+<html>
+
+    <head>
+        <title>CSCI225 Final Project - Gallery</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	    <script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+	    </script>
+    </head>
+
+    <body>
+    <div class="wrapper">
+        <div class="navbar" id="navbar">
+            <ul class = "navibar">
+                <li>
+                    <a href="aboutUs.html">About Us</a>
+                </li>
+                <li>
+                    <a href="comments.html">Comments</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Image Gallery</a>
+                </li>
+                <li>
+                    <a href="https://github.com/ScriptKitt3h/CSCI225_FinalProject">Github</a>
+                </li>
+            </ul>
+        </div>
+
+    <div class="imgGallery">
+        <div class="galSlide">
+            <div class="number">1 - 5</div>
+            <img src="img\IMG_20211203_102633986_HDR.jpg" style="width:100%">
+        </div>
+        <div class="galSlide">
+            <div class="number">2 - 5</div>
+            <img src="img\IMG_20211109_103801588_HDR.jpg" style="width:100%">
+        </div>
+        <div class="galSlide">
+            <div class="number">3 - 5</div>
+            <img src="img\IMG_20211109_174646393.jpg" style="width:100%">
+        </div>
+        <div class="galSlide">
+            <div class="number">4 - 5</div>
+            <img src="img\IMG_20211203_102620907.jpg" style="width:100%">
+        </div>
+        <div class="galSlide">
+            <div class="number">5 - 5</div>
+            <img src="img\IMG_20211104_132758419.jpg" style="width:100%">
+        </div>
+        
+        <a class="previous" onclick="addSlide(-1)"></a>
+        <a class="next" onclick="addSlide(1)"></a>
+
+        <div class="captions">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+              <img class="thumb cursor" src="img\IMG_20211203_102633986_HDR.jpg" style="width:100%" onclick="currentImg(1)" alt="">
+            </div>
+            <div class="column">
+              <img class="thumb cursor" src="img\IMG_20211109_103801588_HDR.jpg" style="width:100%" onclick="currentImg(2)" alt="">
+            </div>
+            <div class="column">
+              <img class="thumb cursor" src="img\IMG_20211109_174646393.jpg" style="width:100%" onclick="currentImg(3)" alt="">
+            </div>
+            <div class="column">
+              <img class="thumb cursor" src="img\IMG_20211203_102620907.jpg" style="width:100%" onclick="currentImg(4)" alt="">
+            </div>
+            <div class="column">
+              <img class="thumb cursor" src="img\IMG_20211104_132758419.jpg" style="width:100%" onclick="currentImg(5)" alt="">
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </body>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function addSlide(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("galSlide");
+        var dots = document.getElementsByClassName("thumb");
+        var captionText = document.getElementById("captions");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+
+</html>

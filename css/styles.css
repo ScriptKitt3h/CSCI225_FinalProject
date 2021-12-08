@@ -6,6 +6,10 @@ body {
     padding: 0;
   }
 
+  * {
+      box-sizing: border-box;
+  }
+
   @font-face {
     font-family: 'fantasma';
     src: url(../fonts/Fantasma-Regular.otf);
@@ -21,6 +25,8 @@ body {
   }
   
   .navibar ul {
+    position: sticky;
+    top: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -68,22 +74,77 @@ body {
     margin: 3px;
   }
   
-  @media (max-width: 600px) {
-    body,
-    .message {
-      margin-top: 0;
-      background: white;
-      box-shadow: none;
-    }
-  
-    body {
-      border-top: 16px solid #ffa100;
-    }
+  .imgGallery {
+    position: relative;
   }
-  
-  .message form {
-    margin: 10px;
-    padding: 30px;
+
+  .galSlide {
+      display: none;
+  }
+
+  .cursor {
+      cursor: pointer;
+  }
+
+  .previous,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .previous:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .number {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .captions {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  .thumb {
+      opacity: 0.75;
+  }
+
+  .active,
+  .thumb:hover {
+      opacity: 1;
   }
   
   input[type="text"],
